@@ -5,7 +5,7 @@ services:
     build: .
     container_name: hw11_helpdesk_web
     ports:
-      - "8092:80" # พอร์ตหน้าเว็บของนาย A คือ 8092
+      - "8093:80" # พอร์ต backend ของนาย A คือ 8093
     volumes:
       - ./src:/var/www/html
     depends_on:
@@ -14,7 +14,7 @@ services:
     image: mysql:8.0
     container_name: hw11_helpdesk_db
     ports:
-      - "8093:3306"
+      - "3308:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root_password
       MYSQL_DATABASE: helpdesk_db
